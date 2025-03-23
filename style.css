@@ -64,7 +64,7 @@ nav ul a::after{
     height: 2px;
     background-color: black;
     position: absolute;
-    top: 0;
+    bottom: 0;
     left: 0;
 }
 
