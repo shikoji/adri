@@ -63,7 +63,12 @@ main{
 }
 
 main .main2{
+    width:42px;
+    height:42px;
     text-align: center;
+    float: left;
+    transition: all 1s ease-in-out;
+    float: right;
 }
 
 main .container{
