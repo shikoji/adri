@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: rgb(141, 141, 141);
+    background-image: url("fotos/coracoes.png");
+
+    background-size: 250px;
+    background-position: center;   
+    background-repeat: repeat;
+    overflow: hidden;
+}
+
+nav {
+    width: 100%;
+    height: 6rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+nav .logo{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+nav .logo span{
+    color: blue;
+
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    list-style: none;
+
+}
+
+nav ul li a{
+    color: blue;
+    font-size: 18px;
+    text-decoration: none;
+
+}
+
+main{
+    width: 100%;
+    height: 100vh;
+}
+
+main .container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+}
+
+.container .texto{
+flex-basis: 50%;
+}
+
+.container .texto h2{
+    font-size: 45px;
+    color: black;
+}
+/*
+.container .texto h2 span{
+    text-align: center;
+}
+*/
+.span1{
+    color: green;
+}
+
+.container .texto p{
+    color: black;
+    font-size: 17px;
+    margin-top: 0.5rem;
+}
+
+.container .texto a{
+    padding: 1rem 4rem;
+    border: 2px solid rgb(0, 217, 255);
+    color: black;
+    display: inline-block;
+    font-size: 18px;
+    margin-top: 1.5rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    background-color: rgb(255, 251, 0);;
+    border-radius: 8px;
+}
+
+.container .texto a:hover{
+    background: transparent;
+}
+
+/*
+.container .img{
+    flex-basis: 45%;
+    display: flex;
+    align-content: center;
+    overflow: hidden;
+}
+
+.container .img img{
+    width: 450px;
+    height: 450px;
+    border-radius: 100px;
+    transition: all 0.5s ease-in-out;
+}
+*/
+
+.container .img{
+    border: 4px solid rgb(2, 27, 255);
+    border-radius: 103px;
+    position: relative;
+    width: 450px;
+    height: 450px;
+    
+}
+
+.container .img img, .container .img video{
+    width: 100%;
+    height: 100%;
+    border-radius: 99px;
+    position: absolute;
+    object-fit: cover;
+    transition: all 0.5s ease-in-out;
+}
+
+.container .img .hover-img{
+    opacity: 0;
+}
+
+.container .img:hover .hover-img{
+    opacity: 1;
+}
+
+.container .img:hover .default-img{
+    opacity: 0;
+}
