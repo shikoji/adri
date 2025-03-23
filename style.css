@@ -151,7 +151,9 @@ flex-basis: 50%;
 }
 
 .menu{
-    background: transparent;
+    background: radial-gradient(circle, transparent 0%, transparent 50%, red 50%);
+    background-size: 0%;
+    background-position: center;
     border: 2px solid red;
     width: 50px;
     height: 50px;
@@ -162,7 +164,7 @@ flex-basis: 50%;
     align-items: center;
     gap: 5px;
     cursor: pointer;
-    transition: background 0.10s ease-in-out;
+    transition: background-size 0.4s ease-in-out;
 }
 
 .bar{
@@ -172,7 +174,7 @@ flex-basis: 50%;
 }
 
 .menu:hover{
-     background-size: 100%;
+    background-size: 100%;
 }
 
 .container .img{
