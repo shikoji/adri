@@ -150,21 +150,35 @@ flex-basis: 50%;
     background-color: rgba(98, 231, 255, 0.521);
 }
 
-/*
-.container .img{
-    flex-basis: 45%;
+.menu{
+    background: transparent;
+    border: 2px solid red;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
     display: flex;
-    align-content: center;
-    overflow: hidden;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    transform: background 0.3s ease-in-out;
 }
 
-.container .img img{
-    width: 450px;
-    height: 450px;
-    border-radius: 100px;
-    transition: all 0.5s ease-in-out;
+.bar{
+    width: 25px;
+    height: 3px;
+    background-color: red;
+    transition: background 0.3s ease-in-out;
 }
-*/
+
+.menu:hover{
+     background-color: red;
+}
+
+.menu:hover .bar{
+    background-color: white;
+}
 
 .container .img{
     border: 4px solid rgb(2, 27, 255);
