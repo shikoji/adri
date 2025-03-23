@@ -61,7 +61,7 @@ nav ul li a{
 nav ul li a::after{
     content: " ";
     width: 0%;
-    height: 2px;
+    height: 4px;
     background-color: black;
     position: absolute;
     bottom: 0;
