@@ -55,7 +55,12 @@ nav ul li a{
     color: blue;
     font-size: 18px;
     text-decoration: none;
+}
 
+nav p{
+    float: left;
+    transition: all 1s ease-in-out;
+    float: right;
 }
 
 main{
