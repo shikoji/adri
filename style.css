@@ -112,12 +112,6 @@ flex-basis: 50%;
     color: black;
 }
 
-/*
-.container .texto h2 span{
-    text-align: center;
-}
-*/
-
 .span1{
     color: green;
 }
@@ -144,6 +138,7 @@ flex-basis: 50%;
     transition: all 0.3s ease;
     background-color: rgb(71, 227, 255);
     border-radius: 100px;
+    margin-bottom: 1rem;
 }
 
 .container .texto a:hover{
@@ -153,10 +148,10 @@ flex-basis: 50%;
 .menu{
     position: relative;
     background: transparent;
-    border: 2px solid red;
+    border: 1px solid rgb(2, 27, 255);
     width: 50px;
     height: 50px;
-    border-radius: 50%;
+    border-radius: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -177,12 +172,12 @@ flex-basis: 50%;
 .menu::before{
     content: " ";
     position: absolute;
-    width: 102%;
-    height: 102%;
-    background: red;
+    width: 200%;
+    height: 200%;
+    background: rgb(2, 27, 255);
     border-radius: 50%;
     transform: scale(0);
-    transition: transform 0.1s ease-in-out;
+    transition: all 0.5s ease-out;
 }
 
 .menu:hover::before{
