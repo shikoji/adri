@@ -114,15 +114,15 @@ main{
 }
 
 .container2 .video .hover-video{
-    opacity: 1;
-}
-
-.container2 .video:hover .hover-video{
     opacity: 0;
 }
 
-.container2 .video:hover .default-video{
+.container2 .video:hover .hover-video{
     opacity: 1;
+}
+
+.container2 .video:hover .default-video{
+    opacity: 0;
 }
 
 .container3{
