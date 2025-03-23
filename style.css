@@ -162,18 +162,17 @@ flex-basis: 50%;
     align-items: center;
     gap: 5px;
     cursor: pointer;
-    transform: background 0.10s ease-in-out;
+    transition: background 0.10s ease-in-out;
 }
 
 .bar{
     width: 25px;
     height: 3px;
-    background-color: white;
-    transition: background 0.3s ease-in-out;
+    background-color: black;
 }
 
 .menu:hover{
-     background-color: red;
+     background-size: 100%;
 }
 
 .container .img{
