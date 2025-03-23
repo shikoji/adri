@@ -6,15 +6,17 @@
 
 body {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     font-family: Arial, sans-serif;
-    background-color: rgb(141, 141, 141);
-    background-image: url("fotos/coracoes.png");
-
-    background-size: 250px;
+    background-image: url("fotos/Fundo5.jpg");
+    background-size: 100%;
     background-position: center;   
-    background-repeat: repeat;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+body::-webkit-scrollbar{
+    display: none;
 }
 
 nav {
@@ -78,14 +80,22 @@ flex-basis: 50%;
     font-size: 45px;
     color: black;
 }
+
 /*
 .container .texto h2 span{
     text-align: center;
 }
 */
+
 .span1{
     color: green;
 }
+
+/*
+.span2{
+    color: rgb(2, 27, 255);
+}
+*/
 
 .container .texto p{
     color: black;
@@ -94,20 +104,20 @@ flex-basis: 50%;
 }
 
 .container .texto a{
-    padding: 1rem 4rem;
-    border: 2px solid rgb(0, 217, 255);
-    color: black;
+    padding: 0.7rem 2rem;
+    border: 2px solid rgb(2, 27, 255);
+    color: rgb(2, 27, 255);
     display: inline-block;
-    font-size: 18px;
-    margin-top: 1.5rem;
+    font-size: 20px;
+    margin-top: 1rem;
     text-decoration: none;
     transition: all 0.3s ease;
-    background-color: rgb(255, 251, 0);;
-    border-radius: 8px;
+    background-color: rgb(71, 227, 255);
+    border-radius: 100px;
 }
 
 .container .texto a:hover{
-    background: transparent;
+    background-color: rgba(98, 231, 255, 0.521);
 }
 
 /*
