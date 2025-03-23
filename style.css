@@ -91,11 +91,10 @@ flex-basis: 50%;
     color: green;
 }
 
-/*
 .span2{
     color: rgb(2, 27, 255);
+    font-size: 18px;
 }
-*/
 
 .container .texto p{
     color: black;
