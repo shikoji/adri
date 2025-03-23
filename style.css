@@ -58,7 +58,7 @@ nav ul li a{
     position: relative;
 }
 
-nav ul a::after{
+nav ul li a::after{
     content: " ";
     width: 0%;
     height: 2px;
@@ -69,7 +69,7 @@ nav ul a::after{
     transition: 0.5s ease-in-out;
 }
 
-nav ul a:hover ::after{
+nav ul li a:hover ::after{
     width: 100%;
 }
 
