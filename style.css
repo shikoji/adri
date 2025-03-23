@@ -58,6 +58,7 @@ nav ul li a{
 }
 
 nav p{
+    align-items: centerd;
     float: left;
     transition: all 1s ease-in-out;
     float: right;
