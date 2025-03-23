@@ -42,7 +42,7 @@ nav .logo{
 nav .logo::after{
     content: " ";
     width: 0%;
-    height: 4px;
+    height: 2px;
     background-color: black;
     position: absolute;
     bottom: 0;
@@ -77,7 +77,7 @@ nav ul li a{
 nav ul li a::after{
     content: " ";
     width: 0%;
-    height: 4px;
+    height: 2px;
     background-color: black;
     position: absolute;
     bottom: 0;
