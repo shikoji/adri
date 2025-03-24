@@ -165,20 +165,21 @@ flex-basis: 50%;
     align-items: center;
     cursor: pointer;
     overflow: hidden;
-    font-size: 24px;
-    color: black; 
-    transition: color 0.3s ease-out;
+    font-size: 24px; /* Ajusta o tamanho dos ícones */
+    color: black; /* Cor padrão dos ícones */
+    transition: color 0.3s ease;
 }
 
 .botoes .menu i {
-    font-size: 28px;
+    font-size: 28px; /* Ajuste o tamanho para testar */
     position: relative;
     z-index: 2;
     -webkit-font-smoothing: antialiased;
 }
 
+/* Efeito de hover */
 .menu:hover {
-    color: white; 
+    color: white; /* Cor dos ícones ao passar o mouse */
 }
 
 .menu::before {
@@ -195,7 +196,7 @@ flex-basis: 50%;
 .menu:hover::before {
     transform: scale(1);
 }
-
+/*akkakwkwkwkkakwkakakwkkwkwkwkwkkw*/
 .container .img{
     border: 4px solid rgb(2, 27, 255);
     border-radius: 103px;
