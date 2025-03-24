@@ -170,6 +170,13 @@ flex-basis: 50%;
     transition: color 0.3s ease;
 }
 
+.botoes .menu i {
+    font-size: 28px;
+    position: relative;
+    z-index: 2;
+    -webkit-font-smoothing: antialiased;
+}
+
 .menu:hover {
     color: white; 
 }
