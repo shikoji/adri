@@ -145,31 +145,36 @@ flex-basis: 50%;
     background-color: rgba(98, 231, 255, 0.521);
 }
 
-.menu{
+.botoes {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    width: fit-content;
+    object-fit: cover;
+}
+
+.botoes .menu {
     position: relative;
     background: transparent;
-    border: 1px solid rgb(2, 27, 255);
+    border: 2px solid rgb(2, 27, 255);
     width: 50px;
     height: 50px;
     border-radius: 100%;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 5px;
     cursor: pointer;
     overflow: hidden;
+    font-size: 24px;
+    color: black; 
+    transition: color 0.3s ease;
 }
 
-.bar{
-    width: 25px;
-    height: 3px;
-    background-color: black;
-    position: relative;
-    z-index: 1;
+.menu:hover {
+    color: white; 
 }
 
-.menu::before{
+.menu::before {
     content: " ";
     position: absolute;
     width: 200%;
@@ -180,7 +185,7 @@ flex-basis: 50%;
     transition: all 0.5s ease-out;
 }
 
-.menu:hover::before{
+.menu:hover::before {
     transform: scale(1);
 }
 
@@ -190,7 +195,6 @@ flex-basis: 50%;
     position: relative;
     width: 450px;
     height: 450px;
-    
 }
 
 .container .img img, .container .img video{
