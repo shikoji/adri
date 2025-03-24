@@ -126,76 +126,25 @@ flex-basis: 50%;
     font-size: 17px;
     margin-top: 0.5rem;
 }
-
-/* Estilo inicial do botão */
-.contratar-btn {
-    background-color: rgb(71, 227, 255);
-    color: rgb(2, 27, 255);
-    font-size: 20px;
-    font-weight: bold;
+/*kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk*/
+.container .texto a{
     padding: 0.7rem 2rem;
     border: 2px solid rgb(2, 27, 255);
-    border-radius: 100px;
-    cursor: pointer;
+    color: rgb(2, 27, 255);
+    display: inline-block;
+    font-size: 20px;
+    margin-top: 1rem;
+    text-decoration: none;
     transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 140px;
-    height: 50px;
+    background-color: rgb(71, 227, 255);
+    border-radius: 100px;
+    margin-bottom: 1rem;
 }
 
-/* Hover: fundo azul claro e texto branco */
-.contratar-btn:hover {
+.container .texto a:hover{
     background-color: rgba(98, 231, 255, 0.521);
 }
-
-/* Oculta os elementos extras */
-.contratar-btn .loading, .contratar-btn .success {
-    position: absolute;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-/* Quando o botão for "clicado" */
-.contratar-btn:active {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    color: transparent;
-}
-
-/* Mostra o efeito de carregamento */
-.contratar-btn:active .loading {
-    opacity: 1;
-    width: 25px;
-    height: 25px;
-    border: 3px solid white;
-    border-top-color: transparent;
-    border-radius: 50%;
-    animation: spin 1s linear infinite;
-}
-
-/* Após um tempo, exibe o ícone de sucesso */
-.contratar-btn:active .success {
-    animation: showCheck 3s forwards;
-}
-
-/* Animação de carregamento girando */ 
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-
-/* Mostra o check após a animação */
-@keyframes showCheck {
-    0% { opacity: 0; }
-    90% { opacity: 0; }
-    100% { opacity: 1; }
-}
-
+/*kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk*/
 .botoes {
     display: flex;
     justify-content: space-between;
