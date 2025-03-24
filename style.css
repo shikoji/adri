@@ -127,7 +127,8 @@ flex-basis: 50%;
     margin-top: 0.5rem;
 }
 /*kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk*/
-.container .texto a{
+/*
+.dinheiro {
     padding: 0.7rem 2rem;
     border: 2px solid rgb(2, 27, 255);
     color: rgb(2, 27, 255);
@@ -140,11 +141,51 @@ flex-basis: 50%;
     border-radius: 100px;
     margin-bottom: 1rem;
 }
+*/
 
-.container .texto a:hover{
-    background-color: rgba(98, 231, 255, 0.521);
+.dinheiro {
+    position: relative;
+    background: transparent;
+    border: 2.5px solid rgb(2, 27, 255);
+    width: 150px;
+    height: 45px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    overflow: hidden;
+    font-size: 24px;
+    color: black;
+    transition: color 0.5s ease;
+    z-index: 1; 
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
 }
+
+.dinheiro::before {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: rgb(2, 27, 255);
+    border-radius: 50px;
+    transform: scale(0);
+    transition: all 0.5s ease-out;
+    z-index: -1; /* Garante que o fundo fique atrás do texto */
+}
+
+.dinheiro:hover::before {
+    transform: scale(1);
+}
+
+.dinheiro:hover {
+    color: white; /* Torna o texto branco ao passar o mouse */
+}
+
+
 /*kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk*/
+
 .botoes {
     display: flex;
     justify-content: space-between;
@@ -156,7 +197,7 @@ flex-basis: 50%;
 .botoes .menu {
     position: relative;
     background: transparent;
-    border: 2px solid rgb(2, 27, 255);
+    border: 2.5px solid rgb(2, 27, 255);
     width: 50px;
     height: 50px;
     border-radius: 100%;
@@ -173,8 +214,6 @@ flex-basis: 50%;
 .botoes .menu i {
     font-size: 28px; /* Ajuste o tamanho para testar */
     position: relative;
-    z-index: 2;
-    -webkit-font-smoothing: antialiased;
 }
 
 /* Efeito de hover */
@@ -196,6 +235,8 @@ flex-basis: 50%;
 .menu:hover::before {
     transform: scale(1);
 }
+
+
 /*akkakwkwkwkkakwkakakwkkwkwkwkwkkw*/
 .container .img{
     border: 4px solid rgb(2, 27, 255);
