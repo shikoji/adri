@@ -10,5 +10,3 @@ https://shikoji.github.io/adri/
 
 <h2 id="C4">Chapter 4</h2>
 <p>This chapter explains ba bla bla</p>
-
-usar padding ao inves de margim
