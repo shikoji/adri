@@ -306,3 +306,8 @@ flex-basis: 50%;
 .container .img:hover .default-img{
     opacity: 0;
 }
+
+a {
+    text-decoration: none;
+    outline: none; 
+  }
