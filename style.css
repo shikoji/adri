@@ -11,12 +11,12 @@ body {
     font-family: Arial, sans-serif;
     background-image: url("fotos/Fundo5.jpg");
     background-size: cover;
-    background-position: center;
+    background-position: center;   
     overflow-x: hidden;
     overflow-y: scroll;
 }
 
-body::-webkit-scrollbar {
+body::-webkit-scrollbar{
     display: none;
 }
 
@@ -30,75 +30,110 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    z-index: 999;
+
 }
 
-nav .logo {
+nav .logo{
     text-decoration: none;
     color: black;
     font-size: 20px;
     position: relative;
 }
 
-nav .logo span {
-    color: blue;
+nav .logo::after{
+    content: " ";
+    width: 0%;
+    height: 2px;
+    background-color: black;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 0.5s ease-in-out;
 }
 
-nav ul {
+nav .logo:hover::after{
+    width: 100%;
+}
+
+nav .logo span{
+    color: blue;
+
+}
+
+nav ul{
     display: flex;
     align-items: center;
     gap: 4rem;
     list-style: none;
+
 }
 
-nav ul li a {
+nav ul li a{
     color: blue;
     font-size: 18px;
     text-decoration: none;
     position: relative;
 }
 
-main {
-    width: 100%;
-    height: 100vh;
-    padding-top: 7rem; /* Evita sobreposição do conteúdo pela nav fixa */
+nav ul li a::after{
+    content: " ";
+    width: 0%;
+    height: 2px;
+    background-color: black;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 0.5s ease-in-out;
 }
 
-main .container {
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+main{
+    width: 100%;
+    height: 100vh;
+}
+
+main .container{
     width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 5%;
-    flex-wrap: wrap; /* Permite que os itens se movam para baixo em telas menores */
 }
 
-.container .texto {
-    flex-basis: 50%;
+.container .texto{
+flex-basis: 50%;
 }
 
-.container .texto h2 {
+.container .texto h2{
     font-size: 45px;
     color: black;
 }
 
-.span1 {
+.span1{
     color: green;
 }
 
-.span2 {
+.span2{
     color: rgb(2, 27, 255);
     font-size: 18px;
 }
 
-.container .texto p {
+.container .texto p{
     color: black;
     font-size: 17px;
     margin-top: 0.5rem;
 }
+/*kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk*/
 
-/* Botões */
+.contratar{
+    position: absolute;
+    text-align: center;
+}
+
 .dinheiro {
     position: relative;
     background: transparent;
@@ -114,10 +149,79 @@ main .container {
     font-size: 24px;
     color: black;
     transition: color 0.5s ease;
-    z-index: 1;
+    z-index: 1; 
     margin-top: 0.5rem;
     margin-bottom: 1rem;
 }
+
+.dinheiro::before {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: rgb(2, 27, 255);
+    border-radius: 50px;
+    transform: scale(0);
+    transition: all 0.5s ease-out;
+    z-index: -1; /* Garante que o fundo fique atrás do texto */
+}
+
+.dinheiro:hover::before {
+    transform: scale(1);
+}
+
+.dinheiro:hover {
+    color: white; /* Torna o texto branco ao passar o mouse */
+}
+
+.dinheiro:active {
+    letter-spacing: 0.5px;
+}
+
+.onclic { 
+  width: 45px;
+  border-color: #bbbbbb;
+  border-width: 3px;
+  font-size: 0;
+  border-left-color: black;
+  animation: rotating 2s 0.25s linear infinite;
+  margin-left: 52px;
+}
+
+.onclic:after {
+  content: "";
+}
+
+.onclic:hover {
+  color: #1ECD97;
+  background: white;
+}
+
+.validate {
+  font-size: 0; 
+  color: white;
+  background: rgb(2, 27, 255); /*verde*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.validate:after {
+  font-size: 16px; 
+  font-family: "FontAwesome";
+  content: "✔"; 
+}
+
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/*kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk*/
 
 .botoes {
     display: flex;
@@ -139,12 +243,42 @@ main .container {
     align-items: center;
     cursor: pointer;
     overflow: hidden;
-    font-size: 24px;
-    color: black;
+    font-size: 24px; /* Ajusta o tamanho dos ícones */
+    color: black; /* Cor padrão dos ícones */
     transition: color 0.3s ease;
 }
 
-.container .img {
+.botoes .menu i {
+    font-size: 28px; /* Ajuste o tamanho para testar */
+    position: relative;
+}
+
+/* Efeito de hover */
+.menu:hover {
+    color: white; /* Cor dos ícones ao passar o mouse */
+}
+
+.menu::before {
+    content: " ";
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: rgb(2, 27, 255);
+    border-radius: 50%;
+    transform: scale(0);
+    transition: all 0.5s ease-out;
+}
+
+.menu:hover::before {
+    transform: scale(1);
+}
+
+.menu:active i {
+    transform: scale(1.1);
+}
+
+/*akkakwkwkwkkakwkakakwkkwkwkwkwkkw*/
+.container .img{
     border: 4px solid rgb(2, 27, 255);
     border-radius: 103px;
     position: relative;
@@ -152,8 +286,7 @@ main .container {
     height: 450px;
 }
 
-.container .img img,
-.container .img video {
+.container .img img, .container .img video{
     width: 100%;
     height: 100%;
     border-radius: 99px;
@@ -162,93 +295,18 @@ main .container {
     transition: all 0.5s ease-in-out;
 }
 
-.container .img .hover-video {
+.container .img .hover-video{
     opacity: 0;
 }
 
-.container .img:hover .hover-video {
+.container .img:hover .hover-video{
     opacity: 1;
 }
 
-.container .img:hover .default-img {
+.container .img:hover .default-img{
     opacity: 0;
 }
 
 a {
     text-decoration: none;
-}
-
-/* Media Queries para Responsividade */
-
-/* Tela de celulares */
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column; /* Empilha os itens da navegação */
-        gap: 1rem;
-        align-items: center;
-    }
-
-    .container .texto {
-        flex-basis: 100%; /* Texto ocupa a largura inteira em telas pequenas */
-        text-align: center;
-    }
-
-    .container .texto h2 {
-        font-size: 30px; /* Ajusta o tamanho do título */
-    }
-
-    .container .texto p {
-        font-size: 14px; /* Ajusta o tamanho da descrição */
-    }
-
-    .container .img {
-        width: 300px; /* Reduz a largura da imagem */
-        height: 300px; /* Reduz a altura da imagem */
-    }
-
-    .botoes {
-        gap: 0.5rem;
-    }
-
-    .botoes .menu {
-        width: 40px; /* Reduz o tamanho dos botões */
-        height: 40px;
-    }
-
-    .dinheiro {
-        width: 120px; /* Ajusta o tamanho do botão "Contratar" */
-        height: 40px;
-        font-size: 20px;
-    }
-}
-
-/* Tela de dispositivos muito pequenos */
-@media (max-width: 480px) {
-    nav ul {
-        gap: 0.5rem;
-    }
-
-    .container .texto h2 {
-        font-size: 24px; /* Ajuste no tamanho da fonte para dispositivos muito pequenos */
-    }
-
-    .container .texto p {
-        font-size: 12px; /* Ajuste no tamanho da descrição */
-    }
-
-    .container .img {
-        width: 250px; /* Reduz a largura da imagem */
-        height: 250px; /* Reduz a altura da imagem */
-    }
-
-    .botoes .menu {
-        width: 35px; /* Reduz o tamanho dos botões */
-        height: 35px;
-    }
-
-    .dinheiro {
-        width: 100px; /* Ajusta o tamanho do botão "Contratar" */
-        height: 35px;
-        font-size: 18px;
-    }
 }
